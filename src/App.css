@@ -115,6 +115,22 @@ h2{
   margin-bottom: 0.5rem;
 }
 
+.btn-reset {
+  margin-top: 10px;
+  padding: 0.5rem 1rem;
+  background-color: #ffc107;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-reset:hover {
+  background-color: #e0a800;
+}
+
 .no-results {
   text-align: center;
   margin: 2rem 0;
@@ -163,5 +179,35 @@ footer{
 
   .movies-grid {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}
+
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.spinner {
+  border: 6px solid rgba(255, 255, 255, 0.2);
+  border-top: 6px solid red;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.loading-text {
+  font-size: 1.2rem;
+  color: white;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
